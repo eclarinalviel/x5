@@ -20,6 +20,11 @@ $category = current(get_the_category());
 
 
 ?>
+<style>
+/*COMMENTS TOBE INCLUDED ON THE CSS OF THIS FILE*/
+
+
+</style>
 
 <div id="primary" class="content-area forum">
 
@@ -54,63 +59,63 @@ $category = current(get_the_category());
                 </div>
             </div>
 
-            <div class="content">
+            <div class="col-md-6 content">
 
-                <table>
-                    <tr>
-                        <td>Position</td>
-                        <td><?php echo maid()->position();?></td>
-                    </tr>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Position</td>
+                            <td><?php echo maid()->position();?></td>
+                        </tr>
 
-                    <tr>
-                        <td>English Speak</td>
-                        <td><?php echo maid()->english_speak();?></td>
-                    </tr>
+                        <tr>
+                            <td>English Speak</td>
+                            <td><?php echo maid()->english_speak();?></td>
+                        </tr>
 
-                    <tr>
-                        <td>Korean Speak</td>
-                        <td><?php echo maid()->korean_speak();?></td>
-                    </tr>
+                        <tr>
+                            <td>Korean Speak</td>
+                            <td><?php echo maid()->korean_speak();?></td>
+                        </tr>
 
-                    <tr>
-                        <td>Stay-in</td>
-                        <td><?php echo maid()->stay_in();?></td>
-                    </tr>
+                        <tr>
+                            <td>Stay-in</td>
+                            <td><?php echo maid()->stay_in();?></td>
+                        </tr>
 
-                    <tr>
-                        <td>Name</td>
-                        <td><?php echo maid()->name();?></td>
-                    </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td><?php echo maid()->name();?></td>
+                        </tr>
 
-                    <tr>
-                        <td>Mobile Number</td>
-                        <td><?php echo maid()->mobile();?></td>
-                    </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td><?php echo maid()->mobile();?></td>
+                        </tr>
 
-                    <tr>
-                        <td>Age</td>
-                        <td><?php echo maid()->age();?></td>
-                    </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td><?php echo maid()->age();?></td>
+                        </tr>
+                    </tbody>
                 </table>
+                
+
                 <?php
-
-
-
-
-
                 the_content();
 
                 //if ( '' !== get_the_author_meta( 'description' ) ) include 'biography.php';
                 ?>
             </div>
 
+            <div class="col-md-6">
             <?php
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) {
                 comments_template();
             }
-
             ?>
+            </div>
 
 
     </main><!-- .site-main -->
